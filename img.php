@@ -9,9 +9,14 @@
 	background-color: blue;	
 	}
 	</style>
+			<link href='https://fonts.googleapis.com/css?family=Lato:400,700italic' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
+<div style="text-align: center;"><h1>Witaj Na Strone HostBook udostępnij swoje pliki i pokaż je znajomym</h1></div>
+<div style="text-align: center; font-family: 'Lobster', cursive; font-size: 30px;" >"Don't say just show"</div> 
+ <h3 style="text-align: center;">www.HostBook.com</h3>
 <?php
 session_start();
 //sprawdzam czy zmienne są sutawione
