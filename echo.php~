@@ -1,0 +1,5 @@
+<?php
+echo password_hash("Tymoteusz0220");
+
+
+?>
