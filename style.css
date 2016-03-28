@@ -19,6 +19,15 @@ body
 	background-color: #8298AF ;
 
 }
+#menu
+{
+	left: 0;
+	top :170px;
+	background-color :grey;
+	width:250px;
+	position:absolute;
+
+}
 .image_class
 {
 	width:600px;
@@ -38,13 +47,10 @@ margin-top: 100px;
 }
 #container
 {
-
-height: 650px;
+	height: 650px;
 	margin: auto;
 	width: 1000px;
 	background-color:  	#3399FF;
-
-
 }
 .g-recaptcha
 {
@@ -81,7 +87,18 @@ height: 650px;
 	text-align: center;
 	padding: 5px;
 }
+#image
+{
+	float: left;
+border: dashed 10px blue;
+margin-left: auto;
+margin-right: auto;
 
+text-align: center;
+height: 400px;
+width:600px;
+
+}
 .string
 {
 	margin-left: auto;
@@ -156,20 +173,129 @@ text-align: center;
 	z-index:99;
 }
 
-
-
-
-@media( min-width:300px ) and (max-width: 400px)
+ @media( min-width:550px ) and (max-width: 650px)
 {
 	#container
 {
-
 	height: 600px;
+	width: 560px;
+ 	font-size:10px;
+}
+#image
+{
+	float: left;
+border: dashed 10px blue;
+margin-left: auto;
+margin-right: auto;
 
+text-align: center;
+height: 280px;
+width:380px;
+
+}
+#kolo
+{
+	height: 600px;
+	width: 560px;
+	border-top-right-radius: 450px;
+}
+
+#decoration
+{
+	width: 380px;
+	height: 280px;
+	background-color:#808080;
+	margin-left:auto;
+	margin-right:auto;
+	margin-top: 100px;
+	background-image:none;
+	border-width: 6px;
+
+}
+.image
+{
+	width: 380px;
+	height: 280px;
+	border-style:dashed;  
+	border-color: blue;
+	border-width: 8px;
+	background-image:none;
+}
+
+.image_class
+{
+	width: 380px;
+	height: 280px;
+}	
+}
+
+@media( min-width:400px ) and (max-width: 550px)
+{
+	#image
+{
+	float: left;
+border: dashed 10px blue;
+margin-left: auto;
+margin-right: auto;
+
+text-align: center;
+height: 230px;
+width:330px;
+
+}
+
+	#container
+{
+	height: 640px;
+	width: 430px;
+ 	font-size:10px;
+}
+
+#kolo
+{
+	height: 640px;
+	width: 430px;
+	border-top-right-radius: 450px;
+}
+
+#decoration
+{
+	width: 2px;
+	height: 200px;
+	background-color:#808080;
+	margin-left:auto;
+	margin-right:auto;
+	margin-top: 100px;
+	background-image:none;
+	border-width: 6px;
+
+}
+.image
+{
+	width: 330px;
+	height: 230px;
+	border-style:dashed;  
+	border-color: blue;
+	border-width: 8px;
+	background-image:none;
+}
+
+.image_class
+{
+	width: 330px;
+	height: 230px;
+}	
+}
+
+
+@media( min-width:350px ) and (max-width: 400px)
+{
+
+	#container
+{
+	height: 600px;
 	width: 350px;
- font-size:10;
-
-
+ 	font-size:10px;
 }
 
 #kolo
@@ -181,21 +307,158 @@ text-align: center;
 
 #decoration
 {
-width: 200px;
-height: 100px;
-background-color: 	#808080;
-margin-left:auto;
-margin-right:auto;
-margin-top: 100px;
+	width: 280px;
+	height: 200px;
+	background-color:#808080;
+	margin-left:auto;
+	margin-right:auto;
+	margin-top: 100px;
+	background-image:none;
+	border-width: 6px;
+
+}
+	#image
+{
+	float: left;
+border: dashed 10px blue;
+margin-left: auto;
+margin-right: auto;
+
+text-align: center;
+height: 200px;
+width:280px;
 
 }
 .image
 {
-	width: 200px;
-	height: 100px;
+	width: 280px;
+	height: 200px;
+	border-style:dashed;  
+	border-color: blue;
+	border-width: 8px;
+	background-image:none;
+}
+
+.image_class
+{
+	width: 280px;
+	height: 200px;
+}	
 }
 
 
+@media( min-width:300px ) and (max-width: 350px)
+{
 
+	#image
+{
+	float: left;
+border: dashed 10px blue;
+margin-left: auto;
+margin-right: auto;
+
+text-align: center;
+height: 200px;
+width:280px;
+
+}
+	#container
+{
+	height: 600px;
+	width: 300px;
+ 	font-size:10px;
+}
+
+#kolo
+{
+	height: 600px;
+	width: 300px;
+	border-top-right-radius: 450px;
+}
+
+#decoration
+{
+	width: 296px;
+	height: 216px;
+	background-color:#808080;
+	margin-left:auto;
+	margin-right:auto;
+	margin-top: 100px;
+	background-image:none;
+	border-width: 6px;
+
+}
+.image
+{
+	width: 280px;
+	height: 200px;
+	border-style:dashed;  
+	border-color: blue;
+	border-width: 8px;
+	background-image:none;
+}
+
+.image_class
+{
+	width: 280px;
+	height: 200px;
+}	
+.linki
+{
 	
+ color :white;
+
+	padding:7px;
+	background-color:#1D3FFF; 
+	display: inline-block;
+	border-right: dotted #000088 2px;
+
+}
+}
+
+
+@media (max-width: 300px)
+{
+
+	#container
+{
+	height: 600px;
+	width: 280px;
+ 	font-size:10px;
+}
+
+#kolo
+{
+	height: 600px;
+	width: 280px;
+	border-top-right-radius: 450px;
+}
+
+#decoration
+{
+	width: 280px;
+	height: 200px;
+	background-color:#808080;
+	margin-left:auto;
+	margin-right:auto;
+	margin-top: 100px;
+	background-image:none;
+	border-width: 6px;
+
+}
+.image
+{
+	width: 240px;
+	height: 180px;
+	border-style:dashed;  
+	border-color: blue;
+	border-width: 8px;
+	background-image:none;
+}
+
+.image_class
+{
+	width: 240px;
+	height: 180px;
+}	
 }

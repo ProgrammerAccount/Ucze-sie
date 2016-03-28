@@ -76,7 +76,7 @@ if($ile>0)
 		@$inf=$info['extension'];
 
 		
-		if($inf=="png"||$inf=="jpg"||$inf=="jpeg")
+	if(($inf=="png")||($inf=="jpg")||($inf=="jpeg")||($inf=="gif"))
 		{
 			echo '<div  class="image">';
 			// wysyłanie nazwy pliku do delete .php tam bedzie usuniety
@@ -116,7 +116,7 @@ $(document).ready(function(){
 	var stickyN = function()
 	{
 var scroll=$(window).scrollTop();
-if(scroll>nav)
+if((scroll>nav)&&(window.innerWidth > 600))
 {
 $('#linki').addClass('sticky');
 

@@ -37,10 +37,15 @@ if(isset($_FILES['file']))
 
  //Sprawdzam czy to zdjecie
 
-if(($inf=="png")||($inf=="jpg")||($inf=="jpeg"))
+if(($inf=="png")||($inf=="jpg")||($inf=="jpeg")||($inf=="gif"))
 	{
-
-			move_uploaded_file($tmp_name,"$uploads_dir/$name" );
+move_uploaded_file($tmp_name,"$uploads_dir/$name" );
+$type=mime_content_type("$uploads_dir/$name");
+	if(($type=="image/png")||($type=="image/jpg")||($type=="image/jpeg")||($type=="image/gif"))
+		{
+			
+		
+	
 			require("connect.php");
 			$connect=new mysqli($host,$user,$pass,$base);
 
@@ -55,7 +60,13 @@ if(($inf=="png")||($inf=="jpg")||($inf=="jpeg"))
 			$connect->close();
 		}
  	}
-		
+ 	else 
+ 	{
+ 		$_SESSION['bad']='<div class="bad">Ten serwis obsługuje tylko zdjecia z rozszeżeniem png , jpeg i jpg ten plik ma rozszeżeniem: ' . $inf.' </div>';
+ 		unlink("$uploads_dir/$name");
+	}
+
+	}
 
 else
 	$_SESSION['bad']='<div class="bad">Ten serwis obsługuje tylko zdjecia z rozszeżeniem png , jpeg i jpg ten plik ma rozszeżeniem: ' . $inf.' </div>';

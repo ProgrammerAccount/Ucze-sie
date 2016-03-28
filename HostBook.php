@@ -26,15 +26,51 @@ height: 400px;
 width:600px;
 
 }
-.image_class
-{
-left: 69;
-}
+
 .image_class:hover
 {
 	opacity:initial;
 }
+@media(min-width: 300px)and (max-width: 400px)
+{
+	#image
+	{
+		width:280px;
+		height:200px;
+		border-width:8px;
+	}
+}
+@media(min-width: 400px)and (max-width: 550px)
+{
+	#image
+	{
+		width:350px;
+		height:250px;
+		border-width:8px;
+	}
+	.image_class
+{ 
+	height: 250px;
+	width: 350px;
+	margin-left:auto;
+	margin-right:auto;
+}
+}
+@media(min-width: 550px)and (max-width: 1000px)
+{
+	.image_class
+{ 
+	height: 350px;
+	width: 450px;
 
+}
+	#image
+	{
+		width:603px;
+		height:403px;
+		border-width:8px;
+	}
+}
 </style>
 	<title>HostBook</title>
 	<meta charset="utf-8"/>
@@ -60,6 +96,9 @@ left: 69;
 	$rezultat = $sql->query("SELECT * FROM file WHERE id_user='{$_SESSION['id_user']}'");
 	//podawanie nazyw i liczby zdjec do wyswietlenia
 	$ile=$rezultat->num_rows;
+
+	
+	
 	echo '<input type="hidden" id="HMI" value="'.$ile.'" >';
 	echo '<input type="hidden" id="ID" value="'.$_SESSION['id_user'].'" >';
 	for($i=0;$i<$ile;$i++)
@@ -77,13 +116,18 @@ left: 69;
 	//Sleider
 		 var HMI = document.getElementById('HMI').value;
 		 var ID = document.getElementById('ID').value;
-		 if(HMI<2)
+		 if(HMI<1)
+		 {
+		 document.getElementById('image').innerHTML='<img class="image_class" src="img/ImageStart.jpg" >'	
+		 }
+		 else if(HMI<2)
 		 {
 		 	//Wyswietlanie gdy jest 1 zdjecie
 		 	var Img1 = document.getElementById('0').value;
 		 	document.getElementById('image').innerHTML='<img class="image_class" src="Upload/'+ID+'/'+Img1+'" >'
 
 		 }
+	
 		 else
 		 {
 		 	//Wyswietlanie gdy są wiecej niż 1 zdjecie

@@ -95,9 +95,9 @@ if(isset($_SESSION['bad']))
 			$id=$odp['id'];
 			$name=$odp['file_name'];
 			$ifo=pathinfo($name);
-			@$info=$ifo['extension'];
+			@$inf=$ifo['extension'];
 			
-			if(($info=="jpeg")||($info=="jpg")||($info=="png"))
+			if(($inf=="png")||($inf=="jpg")||($inf=="jpeg")||($inf=="gif"))
 			{
 					if(isset($_GET['user'])==false)
 					{
@@ -120,12 +120,14 @@ if(isset($_SESSION['bad']))
 
 
 <script type="text/javascript">
+
+
 $(document).ready(function(){
 	var nav= $('#linki').offset().top;
 	var stickyN = function()
 	{
 var scroll=$(window).scrollTop();
-if(scroll>nav)
+if((scroll>nav)&&(window.innerWidth > 600))
 {
 $('#linki').addClass('sticky');
 

@@ -53,8 +53,8 @@ exit;
             <br/>
 
             </br>
-            <p style="font-size: 30px; text-align: center;">Co to HostBook i do czego to służy? </p>
-            <p style=" font-size: 20px;text-align:center; ">HostBook to Serwist umożliwaijacy udostępnieanie zdjeć za darmo.</p>
+            <p style="font-size: 25px; text-align: center;">Co to HostBook i do czego to służy? </p>
+            <p style=" font-size: 17px;text-align:center; ">HostBook to Serwist </br> umożliwaijacy udostępnieanie </br> zdjeć za darmo.</p>
              <p style=" font-size: 20px;text-align:center; ">Możesz je udostępnieć lub zatszymać tylko dla siebie.
              </p>
              

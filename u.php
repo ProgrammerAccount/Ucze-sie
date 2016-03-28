@@ -20,6 +20,11 @@ header("Location:index.php");
 		border: solid 5px black ;
 
 	}
+	.text
+	{
+		width: 500px;
+		text-align: center;
+	}
 
 </style>
 	<title>Udostępnianie zdjecia</title>
@@ -41,7 +46,7 @@ $odp = $rezultat->fetch_assoc();
 $name =$odp['file_name'];
 echo '<div style="margin: auto; width: 600px; height: 400px;"><img src="Upload/'.$_SESSION['id_user']."/".$name.'"  width="600px"
 height= "400px"></div>';
-echo '<div style="text-align:center;">Link: localhost/HostBook/img.php?id='.$_SESSION['id_user'].'&img='.$name.'</div>';
+echo '<div style="text-align:center ; margin:auto;"><input class="text" type="text" value="localhost/HostBook/img.php?id='.$_SESSION['id_user'].'&img='.$name.'"'.'>';
 ?>
 
 <div style=" text-align: center; ">
