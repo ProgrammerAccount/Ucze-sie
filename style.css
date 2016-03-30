@@ -1,3 +1,7 @@
+#menuList
+{
+	display: none;
+}
 .bad
 {
 	z-index: 3;
@@ -6,7 +10,7 @@
 	margin: 10px;
 	width: 300px;
 	margin: auto;
-	border-radius: 4px; 
+	border-radius: 4px;
 	position:relative;
 	margin-top: 10px;
 	margin-bottom: 10px;
@@ -76,12 +80,12 @@ margin-top: 100px;
 	position:relative;
 	position:absolute; left:auto; top:0x
 	margin-bottom: auto;
-	
+
 }
 .elements
 {
-	z-index: 5; 
-	position: relative; 
+	z-index: 5;
+	position: relative;
 	margin-bottom: 10px;
 	margin-top: 0px;
 	text-align: center;
@@ -99,6 +103,17 @@ height: 400px;
 width:600px;
 
 }
+ul
+{
+	display: none;
+}
+ul li
+{
+	display: none;
+}
+#links{
+	display: none;
+}
 .string
 {
 	margin-left: auto;
@@ -108,11 +123,11 @@ width:600px;
 	position: relative;
 	z-index: 4;
 	margin-bottom: 0px;
-	padding: 0px; 
+	padding: 0px;
 	text-align: center;
 }
 
-a:link 
+a:link
 {
 text-decoration: none;
 color: black;
@@ -121,7 +136,7 @@ color: black;
 a:visited
 {
 text-decoration: none;
-color: black;	
+color: black;
 }
 .image
 {
@@ -131,7 +146,7 @@ color: black;
     background-color:#808080;
 	width: 600px;
 	height: 400px;
-	border-style:dashed;  
+	border-style:dashed;
 	border-color: blue;
 	border-width: 10px;
    background-image: url("background_image.png");
@@ -139,11 +154,11 @@ color: black;
 }
 .linki
 {
-	
+
  color :white;
 
 	padding: 15px;
-	background-color:#1D3FFF; 
+	background-color:#1D3FFF;
 	display: inline-block;
 	border-right: dotted #000088 2px;
 
@@ -175,6 +190,45 @@ text-align: center;
 
  @media( min-width:550px ) and (max-width: 650px)
 {
+	#menuList
+
+	{
+		display: grid;
+	}
+	#linki
+	{
+		display: none;
+	}
+	#links
+	{
+
+		display: block;
+		font-family: 'Ubuntu Condensed', sans-serif;
+		font-size: 36px;
+		color:white;
+		text-align: center;
+		height: 50px;
+		position:absolute;
+		width: 100%;
+		background-color:#1D3FFF;
+	}
+ul
+{
+		background-color:  #5cd65c;
+		text-align: center;
+		list-style-type: none;
+		font-size: 20px;
+		margin: 0;
+		padding: 10px; 0 0 0;
+
+}
+ul>li
+{
+	display: block;
+	padding-top: 7px;
+	height:35px;
+	border-top: solid #5ff65c 2px;
+}
 	#container
 {
 	height: 600px;
@@ -216,7 +270,7 @@ width:380px;
 {
 	width: 380px;
 	height: 280px;
-	border-style:dashed;  
+	border-style:dashed;
 	border-color: blue;
 	border-width: 8px;
 	background-image:none;
@@ -226,7 +280,7 @@ width:380px;
 {
 	width: 380px;
 	height: 280px;
-}	
+}
 }
 
 @media( min-width:400px ) and (max-width: 550px)
@@ -274,7 +328,7 @@ width:330px;
 {
 	width: 330px;
 	height: 230px;
-	border-style:dashed;  
+	border-style:dashed;
 	border-color: blue;
 	border-width: 8px;
 	background-image:none;
@@ -284,7 +338,7 @@ width:330px;
 {
 	width: 330px;
 	height: 230px;
-}	
+}
 }
 
 
@@ -333,7 +387,7 @@ width:280px;
 {
 	width: 280px;
 	height: 200px;
-	border-style:dashed;  
+	border-style:dashed;
 	border-color: blue;
 	border-width: 8px;
 	background-image:none;
@@ -343,7 +397,7 @@ width:280px;
 {
 	width: 280px;
 	height: 200px;
-}	
+}
 }
 
 
@@ -392,7 +446,7 @@ width:280px;
 {
 	width: 280px;
 	height: 200px;
-	border-style:dashed;  
+	border-style:dashed;
 	border-color: blue;
 	border-width: 8px;
 	background-image:none;
@@ -402,14 +456,14 @@ width:280px;
 {
 	width: 280px;
 	height: 200px;
-}	
+}
 .linki
 {
-	
+
  color :white;
 
 	padding:7px;
-	background-color:#1D3FFF; 
+	background-color:#1D3FFF;
 	display: inline-block;
 	border-right: dotted #000088 2px;
 
@@ -450,7 +504,7 @@ width:280px;
 {
 	width: 240px;
 	height: 180px;
-	border-style:dashed;  
+	border-style:dashed;
 	border-color: blue;
 	border-width: 8px;
 	background-image:none;
@@ -460,5 +514,5 @@ width:280px;
 {
 	width: 240px;
 	height: 180px;
-}	
+}
 }

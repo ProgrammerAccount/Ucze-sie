@@ -72,4 +72,4 @@ session_regenerate_id( );
 
 
 
-</html><?php session_regenerate_id( );  ?>
+</html>

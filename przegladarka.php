@@ -36,13 +36,22 @@ else
 <!DOCTYPE html>
 <html>
 <head>
+	<script>
+	function menu()
+	{
+		if(document.getElementById("menuList").style.display=="none")
 
+		document.getElementById("menuList").style.display="block";
+		else
+				document.getElementById("menuList").style.display="none";
+	}
+	</script>
 	<title>HostBook</title>
 	<meta charset="utf-8"/>
 	<link rel="stylesheet" type="text/css" href="style.css">
 	<link href='https://fonts.googleapis.com/css?family=Lato:400,700italic' rel='stylesheet' type='text/css'>
 	<link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
-	<style type="text/css"> 
+	<style type="text/css">
 
 .image_class:hover
 {
@@ -56,9 +65,17 @@ else
 <body>
 
 <div style="text-align: center;"><h1>Witaj Na Strone HostBook udostępnij swoje pliki i pokaż je znajomym</h1></div>
-<div style="text-align: center; font-family: 'Lobster', cursive; font-size: 30px;" >"Don't say just show"</div> 
-
-<div id="linki">
+<div style="text-align: center; font-family: 'Lobster', cursive; font-size: 30px;" >"Don't say just show"</div>
+<div id="links" onclick="menu()"> Rozwiń menu <i class="demo-icon icon-down-open"></i> </div>
+</br></br>
+<ul id="menuList">
+		<li><a href="logout.php"> Wyloguj się </a></li>
+		<li><a href="manager.php"> Menager</a></li>
+		<li><a href="przegladarka.php">Przeglonadrka </a></li>
+		<li><a href="uploader.php"> Uploader</a></li>
+		<li style="border-bottom:  solid #5ff65c 2px;"><a href="HostBook.php">Home</a></li>
+</ul>
+<div id="linki" >
 <a href="logout.php"><div class="linki" style="word-spacing: 2px; border-left: dotted #000088 2px;">Wyloguj  się</div> </a>
 <a href="manager.php"><div class="linki" style="word-spacing: 2px;"> Manager Files</div></a>
 <a href="przegladarka.php"><div class="linki">Przegladarka </div></a>
@@ -66,7 +83,7 @@ else
 <a href="HostBook.php"><div class="linki"> Home</div></a>
 <div style="clear: both;"></div>
 	</div>
-	<div style="text-align: center;">kliknij na zdjęcie by udostępnić</div>
+	<div onload="link()" style="text-align: center;">kliknij na zdjęcie by udostępnić</div>
 	<br/><br/>
 	<script src="jquery.js"></script>
 
@@ -96,7 +113,7 @@ if(isset($_SESSION['bad']))
 			$name=$odp['file_name'];
 			$ifo=pathinfo($name);
 			@$inf=$ifo['extension'];
-			
+
 			if(($inf=="png")||($inf=="jpg")||($inf=="jpeg")||($inf=="gif"))
 			{
 					if(isset($_GET['user'])==false)
@@ -132,7 +149,7 @@ if((scroll>nav)&&(window.innerWidth > 600))
 $('#linki').addClass('sticky');
 
 }
-else 
+else
 {
 	$('#linki').removeClass('sticky');
 }
@@ -152,4 +169,3 @@ $(window).scroll(function()
 
 </body>
 </html>
-<?php session_regenerate_id( );  ?>

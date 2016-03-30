@@ -15,8 +15,8 @@ header("Location: index.php");
         }
         //jesli nie jest wypelniona wysyłam kompunkat
         if(!$captcha){
-   $_SESSION['recaptcha']='<div class="bad">Pokaż że nie jesteś robotem!</div>'; 
-         
+   $_SESSION['recaptcha']='<div class="bad">Pokaż że nie jesteś robotem!</div>';
+
           header("Location: index.php");
            exit;
         }
@@ -24,8 +24,8 @@ header("Location: index.php");
         if($response.success==false)
         {
 
-            $_SESSION['recaptcha']='<div class="bad">Pokaż że nie jesteś robotem!</div>';  
-        }  
+            $_SESSION['recaptcha']='<div class="bad">Pokaż że nie jesteś robotem!</div>';
+        }
 
 	$login=$_POST['login'];
 	$pass1=$_POST['pass'];
@@ -47,10 +47,10 @@ if(password_verify($pass1,$odp['pass'])==true)
 	$_SESSION['login']=true;
 	header("Location: HostBook.php");
 	exit;
-}	
+}
 	else $_SESSION['bad']='<div class="bad">Login lub hasło jest nie poprawne</div>'; header("Location: index.php");
 }
 	else $_SESSION['bad']='<div class="bad">Login lub hasło jest nie poprawne</div>'; header("Location: index.php");
 $rezultat->free();
 $connect->close();
-?><?php session_regenerate_id( );  ?>
+?>

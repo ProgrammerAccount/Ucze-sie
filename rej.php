@@ -58,12 +58,12 @@ else
 if(znak($email,"@")==false)
 {
 $good=false;
-$_SESSION['e_mail']="E-mail nie jest poprawny";	
+$_SESSION['e_mail']="E-mail nie jest poprawny";
 }
 if(znak($email,".")==false)
 {
 $good=false;
-$_SESSION['e_mail']="E-mail nie jest poprawny";	
+$_SESSION['e_mail']="E-mail nie jest poprawny";
 }
 
 	$b_mail=filter_var($email,FILTER_SANITIZE_EMAIL);
@@ -83,6 +83,7 @@ if($ile > 0)
 //}
 //Password
 //{
+
 // sprawdzam czy chaslo ma 0d 8 do 20 znakow
 if((strlen($pass1)<8)&&(strlen($pass1)>20))
 {
@@ -104,19 +105,19 @@ if($pass1!=$pass2)
           $captcha=$_POST['g-recaptcha-response'];
         }
         if(!$captcha){
-   $_SESSION['recaptcha']='<div class="bad">Pokaż że nie jesteś robotem!</div>'; 
-      $good=false;   
-      
+   $_SESSION['recaptcha']='<div class="bad">Pokaż że nie jesteś robotem!</div>';
+      $good=false;
+
 
         }
         $response=file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret=6Ld-7hgTAAAAAFLWVd6wPiYAIGbGWPFNS-gOPD12&response=".$captcha."&remoteip=".$_SERVER['REMOTE_ADDR']);
         if($response.success==false)
         {
 
-            $_SESSION['recaptcha']='<div class="bad">Pokaż że nie jesteś robotem!</div>';  
+            $_SESSION['recaptcha']='<div class="bad">Pokaż że nie jesteś robotem!</div>';
 
-      $good=false;   
-        }  
+      $good=false;
+        }
 
         //Sprawdzam czy wszystko dobrze
 if($good==true)
@@ -147,7 +148,7 @@ exit();
 else
 {
 	$connect->close();
-	 session_regenerate_id( ); 
+	 session_regenerate_id( );
 header("Location: rejstracja.php");
 
 }

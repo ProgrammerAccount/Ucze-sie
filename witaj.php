@@ -33,4 +33,3 @@ echo '<h1 style="text-align: center;">Witaj '.$_SESSION['name'].', dziekujemy za
 <p style=" text-align:center; color:white; border-color: red;border-radius: 15px;  padding: 10px; margin: 6px; background-color: red;">Możesz sie zalogować i pamiętaj by zweryfikowac e-mail inaczej twoje konto zostanie usunietę w ciągu 24 godzin </p>
 </body>
 </html>
-<?php session_regenerate_id( );  ?>

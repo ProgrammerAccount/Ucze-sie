@@ -29,7 +29,7 @@ if(isset($_FILES['file']))
 		$name="img";
 	for($i=0;$i<10;$i++)
 	{
-	
+
 	$XD=rand(1,9);
 	$name=$name.(string)$XD;
 	}
@@ -43,9 +43,9 @@ move_uploaded_file($tmp_name,"$uploads_dir/$name" );
 $type=mime_content_type("$uploads_dir/$name");
 	if(($type=="image/png")||($type=="image/jpg")||($type=="image/jpeg")||($type=="image/gif"))
 		{
-			
-		
-	
+
+
+
 			require("connect.php");
 			$connect=new mysqli($host,$user,$pass,$base);
 
@@ -55,12 +55,12 @@ $type=mime_content_type("$uploads_dir/$name");
 		}
 		else
 		{
-		
-			$connect->query("INSERT INTO file VALUES(NULL,'$name','{$_SESSION['id_user']}','0')");		
+
+			$connect->query("INSERT INTO file VALUES(NULL,'$name','{$_SESSION['id_user']}','0')");
 			$connect->close();
 		}
  	}
- 	else 
+ 	else
  	{
  		$_SESSION['bad']='<div class="bad">Ten serwis obsługuje tylko zdjecia z rozszeżeniem png , jpeg i jpg ten plik ma rozszeżeniem: ' . $inf.' </div>';
  		unlink("$uploads_dir/$name");
@@ -78,6 +78,16 @@ else
 <html>
 
 	<head>
+		<script>
+		function menu()
+		{
+			if(document.getElementById("menuList").style.display=="none")
+
+			document.getElementById("menuList").style.display="block";
+			else
+					document.getElementById("menuList").style.display="none";
+		}
+		</script>
 <link href='https://fonts.googleapis.com/css?family=Lato:400,700italic' rel='stylesheet' type='text/css'>
 	<link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
 		<title>HostBook</title>
@@ -96,7 +106,16 @@ else
 
 	<body>
 <div style="text-align: center;"><h1>Witaj Na Strone HostBook udostępnij swoje pliki i pokaż je znajomym</h1></div>
-<div style="text-align: center; font-family: 'Lobster', cursive; font-size: 30px;" >"Don't say just show"</div> 
+<div style="text-align: center; font-family: 'Lobster', cursive; font-size: 30px;" >"Don't say just show"</div>
+<div id="links" onclick="menu()"> Rozwiń menu <i class="demo-icon icon-down-open"></i> </div>
+</br></br>
+<ul id="menuList">
+		<li><a href="logout.php"> Wyloguj się </a></li>
+		<li><a href="manager.php"> Menager</a></li>
+		<li><a href="przegladarka.php">Przeglonadrka </a></li>
+		<li><a href="uploader.php"> Uploader</a></li>
+		<li style="border-bottom:  solid #5ff65c 2px;"><a href="HostBook.php">Home</a></li>
+</ul>
 <div id="linki">
 <a href="logout.php"><div class="linki" style="word-spacing: 2px; border-left: dotted #000088 2px;">Wyloguj  się</div> </a>
 <a href="manager.php"><div class="linki" style="word-spacing: 2px;"> Manager Files</div></a>
@@ -110,14 +129,14 @@ else
 
 <div style=" marign:auto; text-align: center; margin-top: 100px;">		<input  type="file" name="file" accept="image/*" />
 			<input type="submit" value="Wyslij plik">
-			<input type="hidden" name="MAX_FILE_SIZE" value="30000" /></div>	
-			<div style="font-size: 35px; font-family: 'Lato', sans-serif; text-align: center;" ><p> Wybierz "Browse..." i wyszukaj zdjęcia które chcesz udostępnić.</p> Następnie nacisnij Wyslij Plik </div> 
+			<input type="hidden" name="MAX_FILE_SIZE" value="30000" /></div>
+			<div style="font-size: 35px; font-family: 'Lato', sans-serif; text-align: center;" ><p> Wybierz "Browse..." i wyszukaj zdjęcia które chcesz udostępnić.</p> Następnie nacisnij Wyslij Plik </div>
 				<?php
 
 				if(isset($_SESSION['bad']))
 				{
 
-				echo $_SESSION['bad'];	
+				echo $_SESSION['bad'];
 				unset($_SESSION['bad']);
 
 				}
@@ -153,4 +172,3 @@ $(window).scroll(function()
 	</body>
 
 </html>
-<?php session_regenerate_id( );  ?>
